@@ -1,5 +1,7 @@
 # Environment example
 
+## Configuration
+
 ```json
 {
   "name": "my-dev-environment",
