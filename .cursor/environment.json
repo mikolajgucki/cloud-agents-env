@@ -1,6 +1,9 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  }
+  "terminals": [
+    {
+      "name": "Environment Manager",
+      "command": "node env/start.js",
+      "description": "Sets up the external environment components"
+    }
+  ]
 }
