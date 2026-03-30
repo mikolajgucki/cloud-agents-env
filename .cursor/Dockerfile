@@ -13,4 +13,4 @@ RUN apt-get update \
 USER node
 WORKDIR /workspace
 
-# RUN node env/install.js
+RUN node /workspace/env/install.js
