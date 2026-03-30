@@ -11,6 +11,6 @@ RUN apt-get update \
 
 # Run as a non-root user and start from the home directory.
 USER node
-WORKDIR /home/node
+WORKDIR /workspace
 
 RUN node env/install.js
