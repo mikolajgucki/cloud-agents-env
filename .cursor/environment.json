@@ -1,5 +1,4 @@
 {
-  "install": "node env/install.js",
   "terminals": [
     {
       "name": "Environment Manager",
