@@ -1,4 +1,8 @@
 {
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
   "terminals": [
     {
       "name": "Environment Manager",
