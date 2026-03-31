@@ -56,10 +56,12 @@ describe("MessageStore", () => {
 async function fetchDBConfig() {
   const tmpCfgPath = path.join(__dirname, "..", "..", "_tmp_cfg.json");
   if (fs.existsSync(tmpCfgPath)) {
+    console.log('Using existing config from ', tmpCfgPath);
     const existingConfig = fs.readFileSync(tmpCfgPath, "utf8");
     return JSON.parse(existingConfig);
   }
 
+  console.log('Fetching config from the server');
   const authToken = process.env.AUTH_TOKEN;
   const response = await fetch(process.env.ALLOCATE_URL, {
     method: "POST",
