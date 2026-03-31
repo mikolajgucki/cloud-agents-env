@@ -1,5 +1,30 @@
 # Environment example
 
+## Database setup
+
+Create the `test_messages` table before running the application:
+
+```sql
+CREATE TABLE test_messages (
+    id UUID PRIMARY KEY,
+    source TEXT NOT NULL,
+    text TEXT NOT NULL
+);
+```
+
+## Application
+
+The `app/` directory contains a Node.js application that inserts rows into the
+`test_messages` table via Knex.
+
+```bash
+cd app
+npm install
+npm test
+```
+
+## Cursor `environment.json`
+
 ```json
 {
   "name": "my-dev-environment",

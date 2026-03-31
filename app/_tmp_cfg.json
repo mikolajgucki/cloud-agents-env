@@ -1,0 +1,8 @@
+{
+  "id": "ba01ecbd-b43e-47eb-8a09-865793a05894",
+  "dbHost": "mealz.andcreations.io",
+  "dbPort": 5432,
+  "dbName": "postgres",
+  "dbUser": "jobref-backend",
+  "dbPassword": "jobref-backend"
+}
