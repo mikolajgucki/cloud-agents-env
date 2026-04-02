@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untitled</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 24px 0;
+      }
+
+      .frame {
+        position: relative;
+        width: 393px;
+        height: 852px;
+        background-color: #ffffff;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .text-node {
+        position: absolute;
+        left: 161px;
+        top: 400px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14.52px;
+        color: #000000;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <span class="text-node">This is a test</span>
+    </div>
+  </body>
+</html>
