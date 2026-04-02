@@ -18,10 +18,12 @@ describe("index.html", () => {
     );
     expect(html).toContain("<title>Hello world</title>");
 
+    expect(html).toContain("background-color: #1e1e1e;");
     expect(html).toContain(".frame {");
     expect(html).toContain("width: 393px;");
     expect(html).toContain("height: 852px;");
     expect(html).toContain("background-color: #ffffff;");
+    expect(html).toContain('<main class="frame" aria-label="iPhone 14 and 15 Pro canvas">');
   });
 
   it("renders the expected text node content and styling", () => {

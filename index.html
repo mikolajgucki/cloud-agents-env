@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello world</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-        }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #1e1e1e;
+      }
 
-        .container {
-            width: 393px;
-            height: 852px;
-            background-color: #ffffff;
-            position: relative;
-            margin: 0 auto;
-        }
+      .frame {
+        position: relative;
+        width: 393px;
+        height: 852px;
+        background-color: #ffffff;
+      }
 
-        .hello-text {
-            position: absolute;
-            left: 163px;
-            top: 399px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 14.52px;
-            color: #000000;
-        }
-
-        @media (max-width: 393px) {
-            .container {
-                width: 100%;
-                height: 100vh;
-            }
-        }
+      .text-node {
+        position: absolute;
+        left: 163px;
+        top: 399px;
+        margin: 0;
+        color: #000000;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.522727px;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="hello-text">Hello world!</div>
-    </div>
-</body>
+  </head>
+  <body>
+    <main class="frame" aria-label="iPhone 14 and 15 Pro canvas">
+      <span class="text-node">Hello world!</span>
+    </main>
+  </body>
 </html>
