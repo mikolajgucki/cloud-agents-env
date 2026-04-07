@@ -23,6 +23,16 @@ npm install
 npm test
 ```
 
+## `environment.json`
+
+```json
+{
+  "name": "cloud-agents-dev",
+  "user": "node",
+  "start": "node env/start.js"
+}
+```
+
 ## Cursor `environment.json`
 
 ```json
