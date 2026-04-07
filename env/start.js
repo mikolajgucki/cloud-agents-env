@@ -3,16 +3,28 @@ const LOG_URL = new URL("https://mealz.andcreations.io:8443/log");
 
 const id = crypto.randomUUID();
 
-function postLog(body) {
+async function postLog(body) {
+  console.log("Posting log", body);
+  const authToken = process.env.AUTH_TOKEN;
+  if (!authToken) {
+    throw new Error("AUTH_TOKEN is not set");
+  }
   const data = JSON.stringify({ ...body, id });
-  return fetch(LOG_URL, {
+  const response = await fetch(LOG_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Content-Length": Buffer.byteLength(data),
+      "X-Auth-Token": `${authToken}`,
     },
     body: data,
   });
+
+  if (!response.ok) {
+    const errorBody = await response.text();
+    throw new Error(
+      `Log request failed (${response.status} ${response.statusText}): ${errorBody}`,
+    );
+  }
 }
 
 async function main() {
