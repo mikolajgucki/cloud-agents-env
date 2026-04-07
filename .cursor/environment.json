@@ -1,6 +1,5 @@
 {
   "name": "cloud-agents-dev",
   "user": "node",
-  "start": "node env/start.js",
-  "agentCanUpdateSnapshot": false
+  "start": "node env/start.js"
 }
