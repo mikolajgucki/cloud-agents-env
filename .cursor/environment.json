@@ -1,3 +1,9 @@
 {
-  "start": "node env/start.js"
+  "terminals": [
+    {
+      "name": "test",
+      "command": "node env/start.js",
+      "description": "Test terminal"
+    }
+  ]
 }
