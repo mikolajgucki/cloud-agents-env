@@ -1,0 +1,28 @@
+{
+  "name": "environment-example",
+  "version": "1.0.0",
+  "description": "Environment example with index.html",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/index.test.js"
+    ],
+    "collectCoverageFrom": [
+      "index.html"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/app/"
+    ]
+  }
+}
