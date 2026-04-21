@@ -72,7 +72,7 @@ describe('index.html', () => {
             expect(styleTag).toBeTruthy();
             styles = styleTag.textContent;
 
-            bodyStyles = extractStyles(styles, 'body');
+            bodyStyles = extractAllBodyStyles(styles);
             messageStyles = extractStyles(styles, '.message');
         });
 
@@ -177,7 +177,24 @@ describe('index.html', () => {
  * Helper function to extract styles for a specific selector
  */
 function extractStyles(cssText, selector) {
-    const regex = new RegExp(selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*\\{([^}]*)\\}', 'i');
+    const escapedSelector = selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escapedSelector + '\\s*\\{([^}]*)\\}', 'is');
     const match = cssText.match(regex);
     return match ? match[1] : '';
+}
+
+/**
+ * Helper function to extract all body-related styles (from all selectors containing body)
+ */
+function extractAllBodyStyles(cssText) {
+    let allStyles = '';
+    
+    const bodyRegex = /(?:^|[,\s])body(?:\s*,\s*\w+|\s*)\{([^}]*)\}/gis;
+    const matches = cssText.matchAll(bodyRegex);
+    
+    for (const match of matches) {
+        allStyles += match[1];
+    }
+    
+    return allStyles;
 }
