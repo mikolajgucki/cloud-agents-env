@@ -1,6 +1,16 @@
-# Environment example
+# TypeScript Boilerplate with PostgreSQL
 
-## Database setup
+A production-ready TypeScript boilerplate for Node.js applications with PostgreSQL database integration.
+
+## Features
+
+- **TypeScript**: Fully typed codebase with strict compiler options
+- **PostgreSQL**: Database integration with Knex.js query builder
+- **Testing**: Comprehensive test suite with Jest and ts-jest
+- **Code Quality**: ESLint and Prettier for consistent code style
+- **Type Safety**: Strong typing for database operations and configurations
+
+## Database Setup
 
 Create the `test_messages` table before running the application:
 
@@ -12,14 +22,12 @@ CREATE TABLE test_messages (
 );
 ```
 
-## Application
-
-The `app/` directory contains a Node.js application that inserts rows into the
-`test_messages` table via Knex.
+## Quick Start
 
 ```bash
 cd app
 npm install
+npm run build
 npm test
 ```
 
