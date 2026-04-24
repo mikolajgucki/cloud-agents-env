@@ -1,0 +1,13 @@
+{
+  "name": "cloud-agents-env",
+  "version": "1.0.0",
+  "description": "Environment setup with styles",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:styles": "jest __tests__/styles.test.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

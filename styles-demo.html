@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styles Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-2xl mb-2xl">
+    <!-- Header -->
+    <header class="text-center mb-2xl">
+      <h1 class="text-4xl font-bold text-primary mb-md">Styles Demo</h1>
+      <p class="text-lg text-secondary">A comprehensive CSS framework for modern web applications</p>
+    </header>
+
+    <!-- Typography Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Typography</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <p>This is a paragraph with <a href="#">a link</a>, <strong>bold text</strong>, and <em>italic text</em>.</p>
+      <p class="text-sm">Small text</p>
+      <p class="text-lg">Large text</p>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Buttons</h2>
+      <div class="flex gap-md flex-wrap">
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-outline">Outline Button</button>
+        <button class="btn btn-primary btn-sm">Small Button</button>
+        <button class="btn btn-primary btn-lg">Large Button</button>
+        <button class="btn btn-primary" disabled>Disabled Button</button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Cards</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Card Title 1</h3>
+          </div>
+          <div class="card-body">
+            <p>This is a card with header, body, and footer sections.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Card Title 2</h3>
+          </div>
+          <div class="card-body">
+            <p>Cards are great for organizing content into distinct sections.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-outline btn-sm">Learn More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Card Title 3</h3>
+          </div>
+          <div class="card-body">
+            <p>They include hover effects and are fully responsive.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-secondary btn-sm">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Forms</h2>
+      <div class="card" style="max-width: 600px;">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input type="text" id="name" class="form-input" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" class="form-input" placeholder="your@email.com">
+              <span class="form-help">We'll never share your email with anyone else.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="country">Country</label>
+              <select id="country" class="form-select">
+                <option>United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Alerts</h2>
+      <div class="alert alert-success">
+        <strong>Success!</strong> Your operation completed successfully.
+      </div>
+      <div class="alert alert-error">
+        <strong>Error!</strong> Something went wrong. Please try again.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Please review your input before proceeding.
+      </div>
+      <div class="alert alert-info">
+        <strong>Info:</strong> Here's some helpful information for you.
+      </div>
+    </section>
+
+    <!-- Grid Layout Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Grid Layout</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="font-semibold mb-sm">Feature 1</h4>
+            <p class="text-sm">Responsive grid system that adapts to screen size.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="font-semibold mb-sm">Feature 2</h4>
+            <p class="text-sm">Mobile-first design approach for better UX.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="font-semibold mb-sm">Feature 3</h4>
+            <p class="text-sm">Modern CSS with custom properties and flexbox.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="font-semibold mb-sm">Feature 4</h4>
+            <p class="text-sm">Comprehensive utility classes for rapid development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Utility Classes Section -->
+    <section class="mb-2xl">
+      <h2 class="mb-lg">Utility Classes</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="mb-md">
+            <p class="text-center mb-sm">Text Center</p>
+            <p class="text-left mb-sm">Text Left</p>
+            <p class="text-right mb-sm">Text Right</p>
+          </div>
+          <div class="mb-md">
+            <span class="text-primary">Primary Color</span> |
+            <span class="text-secondary">Secondary Color</span> |
+            <span class="text-success">Success Color</span> |
+            <span class="text-error">Error Color</span> |
+            <span class="text-warning">Warning Color</span>
+          </div>
+          <div class="flex justify-between items-center p-md bg-primary text-center" style="color: white; border-radius: 0.5rem;">
+            <span>Flexbox</span>
+            <span>Space Between</span>
+            <span>Items</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center pt-2xl border-t">
+      <p class="text-secondary">&copy; 2026 Styles Demo. Created with modern CSS practices.</p>
+    </footer>
+  </div>
+</body>
+</html>
