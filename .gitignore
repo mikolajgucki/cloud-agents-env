@@ -1,3 +1,16 @@
 **/node_modules
 **/.env
 app/_tmp_cfg.json
+
+# TypeScript
+app/dist
+app/*.tsbuildinfo
+
+# Test coverage
+app/coverage
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo

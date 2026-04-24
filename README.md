@@ -1,6 +1,33 @@
-# Environment example
+# TypeScript Boilerplate Project
 
-## Database setup
+A production-ready TypeScript boilerplate for Node.js applications with PostgreSQL database integration.
+
+## Features
+
+- **TypeScript**: Full TypeScript support with strict mode enabled
+- **Database Integration**: PostgreSQL integration using Knex.js with type-safe queries
+- **Testing**: Jest testing framework with TypeScript support and comprehensive test coverage
+- **Code Quality**: ESLint and Prettier for consistent code formatting
+- **Type Safety**: Strongly typed database configurations and models
+
+## Project Structure
+
+```
+app/
+├── src/
+│   ├── __tests__/          # Test files
+│   ├── types/              # TypeScript type definitions
+│   ├── utils/              # Utility functions
+│   ├── MessageStore.ts     # Main business logic
+│   └── index.ts           # Public exports
+├── dist/                   # Compiled JavaScript (generated)
+├── tsconfig.json          # TypeScript configuration
+├── jest.config.js         # Jest configuration
+├── .eslintrc.js          # ESLint configuration
+└── .prettierrc.js        # Prettier configuration
+```
+
+## Database Setup
 
 Create the `test_messages` table before running the application:
 
@@ -12,16 +39,94 @@ CREATE TABLE test_messages (
 );
 ```
 
-## Application
-
-The `app/` directory contains a Node.js application that inserts rows into the
-`test_messages` table via Knex.
+## Installation
 
 ```bash
 cd app
 npm install
-npm test
 ```
+
+## Development
+
+### Build the Project
+
+```bash
+npm run build
+```
+
+### Run Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+### Code Quality
+
+```bash
+# Lint the code
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+
+# Format the code
+npm run format
+
+# Check formatting
+npm run format:check
+
+# Type check without emitting files
+npm run typecheck
+```
+
+## Usage Example
+
+```typescript
+import { MessageStore, fetchDBConfig } from './src';
+
+async function main() {
+  // Fetch database configuration
+  const dbConfig = await fetchDBConfig();
+  
+  // Create MessageStore instance
+  const store = new MessageStore({
+    client: 'pg',
+    connection: {
+      host: dbConfig.dbHost,
+      port: dbConfig.dbPort,
+      database: dbConfig.dbName,
+      user: dbConfig.dbUser,
+      password: dbConfig.dbPassword,
+    },
+  });
+
+  // Insert a message
+  const id = await store.insert('example', 'Hello, TypeScript!');
+  console.log('Inserted message with ID:', id);
+
+  // Retrieve the message
+  const message = await store.findById(id);
+  console.log('Retrieved message:', message);
+
+  // Clean up
+  await store.destroy();
+}
+
+main().catch(console.error);
+```
+
+## Environment Variables
+
+The application requires the following environment variables for database configuration:
+
+- `AUTH_TOKEN`: Authentication token for resource allocation
+- `ALLOCATE_URL`: URL for database resource allocation endpoint
+
+Alternatively, you can manually configure the database connection in your tests or application code.
 
 ## `environment.json`
 
